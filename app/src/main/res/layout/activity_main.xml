@@ -1,11 +1,33 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_draw_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_activity_item_height"
+            android:background="@drawable/selector_bg_list">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/main_activity_item_text_size"
+                android:textColor="@color/black"
+                android:text="绘画板"/>
+        </LinearLayout>
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray1"/>
+
+    </LinearLayout>
+
 
 </RelativeLayout>
